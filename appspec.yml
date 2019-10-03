@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./GATWAY/
+  - source: GATWAY/
     destination: /home/ec2-user/builds
 
 
