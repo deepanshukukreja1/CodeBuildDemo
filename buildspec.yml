@@ -23,3 +23,6 @@ phases:
 artifacts:
   files:
     - 'GATEWAY/**/*'
+    - 'appspec.yml'
+    - 'start.sh'
+    - 'stop.sh'

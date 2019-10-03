@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: ./GATWAY/
+    destination: /home/ec2-user/builds
+
+
+hooks:
+  ApplicationStop:
+    - location: ./stop.sh
+      timeout: 30
+      runas: root
+
+  ApplicationStart:
+    - location: ./start.sh
+      timeout: 30
+      runas: root
+
+
