@@ -24,7 +24,7 @@ phases:
       - versionName=`echo $jarfilename|cut -d '-' -f2|sed 's/.jar//'`
       - echo "java $Java_details /home/ec2-user/builds/lib/messageUtil-1.0.jar">> GATEWAY/bin/startup.sh
       - echo "Version Name is equal to $versionName"
-      - aws ssm put-parameter --name 'GATEWAY' --description "To store build version" --value $versionName --type 'String' --region 'us-west-1'
+      - aws ssm put-parameter --name 'GATEWAY' --description "To store build version" --value $versionName --type 'String' --region 'us-west-1' --overwrite
 
 artifacts:
   files:
