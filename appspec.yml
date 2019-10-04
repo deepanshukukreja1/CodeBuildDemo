@@ -3,7 +3,8 @@ os: linux
 files:
   - source: GATEWAY/
     destination: /home/ec2-user/builds
-
+    when: "{{ deployVersion }} == {{ deployedBuild }}
+   
 
 hooks:
   ApplicationStop:
