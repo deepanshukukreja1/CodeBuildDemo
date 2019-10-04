@@ -7,7 +7,8 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
-      - if [ 1 -eq 1 ]; then echo "Version is same, failing the build process"; exit 1; fi
+      - echo NO_ARTIFACTS = $NO_ARTIFACTS
+      - if [ 1 -eq 1 ]; then echo "Version is same, failing the build process"; export NO_ARTIFACTS=true; fi
   build:
     commands:
       - echo Build started on `date`
