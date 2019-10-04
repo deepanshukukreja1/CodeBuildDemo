@@ -19,6 +19,7 @@ phases:
       - mkdir -p GATEWAY/bin GATEWAY/lib GATEWAY/conf
       - touch GATEWAY/bin/startup.sh GATEWAY/conf/application.properties
       - cp target/messageUtil-1.0.jar GATEWAY/lib
+      - cp startup.sh GATEWAY/bin
       - pwd
       - jarfilename=`ls target/message*`
       - versionName=`echo $jarfilename|cut -d '-' -f2|sed 's/.jar//'`
